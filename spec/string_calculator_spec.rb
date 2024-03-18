@@ -22,4 +22,8 @@ RSpec.describe StringCalculator do
   it "should return the sum of digits contains new lines between numbers in string" do
     expect(string_calculator.add("1\n2,3")).to eq(6)
   end
+
+  it "should return the invalid input contains new lines at the end in string" do
+    expect(string_calculator.add("1,\n")).to eq("Invalid Input")
+  end
 end
