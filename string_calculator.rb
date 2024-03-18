@@ -21,6 +21,12 @@ class StringCalculator
     else
       numbers = input.split(/[,\n]/).map(&:to_i)
     end
+    negative_numbers = get_negative_numbers(numbers)
+    return "Negative Numbers not allowed #{negative_numbers.join(",")}" unless negative_numbers.empty?
     numbers.sum
+  end
+
+  def get_negative_numbers(numbers)
+    numbers.select{ |n| n < 0 }
   end
 end
