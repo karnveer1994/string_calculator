@@ -18,4 +18,8 @@ RSpec.describe StringCalculator do
   it "should return the sum of digits when multiple digits are given separated by comma" do
     expect(string_calculator.add("1,5,6,3")).to eq(15)
   end
+
+  it "should return the sum of digits contains new lines between numbers in string" do
+    expect(string_calculator.add("1\n2,3")).to eq(6)
+  end
 end
