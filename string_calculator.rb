@@ -10,7 +10,7 @@ class StringCalculator
   end
 
   def sum_of_numbers(input)
-    numbers = input.split(',').map(&:to_i)
+    numbers = input.split(/[,\n]/).map(&:to_i)
     numbers.sum
   end
 end
