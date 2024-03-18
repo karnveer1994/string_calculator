@@ -30,4 +30,8 @@ RSpec.describe StringCalculator do
   it "should return the sum of digits when a delimiter is given in string" do
     expect(string_calculator.add("//;\n1;2")).to eq(3)
   end
+
+  it "should return the negative numbers not allowed when a negative number is given in string" do
+    expect(string_calculator.add("1,-5, -3")).to eq("Negative Numbers not allowed -5,-3")
+  end
 end
