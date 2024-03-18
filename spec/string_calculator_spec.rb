@@ -26,4 +26,8 @@ RSpec.describe StringCalculator do
   it "should return the invalid input contains new lines at the end in string" do
     expect(string_calculator.add("1,\n")).to eq("Invalid Input")
   end
+
+  it "should return the sum of digits when a delimiter is given in string" do
+    expect(string_calculator.add("//;\n1;2")).to eq(3)
+  end
 end
