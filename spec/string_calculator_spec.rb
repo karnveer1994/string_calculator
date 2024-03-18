@@ -14,4 +14,8 @@ RSpec.describe StringCalculator do
   it "should return the sum of digits when two digits are given separated by comma" do
     expect(string_calculator.add("1,5")).to eq(6)
   end
+
+  it "should return the sum of digits when multiple digits are given separated by comma" do
+    expect(string_calculator.add("1,5,6,3")).to eq(15)
+  end
 end
